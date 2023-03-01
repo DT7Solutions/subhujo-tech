@@ -34,7 +34,7 @@
 
 				
 				
-				<div class="container-fluid p-relative">
+				<!-- <div class="container-fluid p-relative">
 					<div class="row">
 						<div class="col-lg-6 p-0">
 							<section class="section ps-4 pe-4 border-top-0 h-100 py-5 m-0">
@@ -59,7 +59,34 @@
 							</div>
 						</div>
 					</div>
-				</div>
+				</div> -->
+				<section class="section section-default border-0 mt-0  appear-animation" data-appear-animation="fadeIn" data-appear-animation-delay="750">
+					<div class="container py-4">
+
+						<div class="row align-items-center">
+							
+							<div class="col-md-6">
+								<div class="overflow-hidden mb-2">
+									<h2 class="text-color-dark font-weight-normal text-7 mb-0 pt-0 mt-0 appear-animation" data-appear-animation="maskUp" data-appear-animation-delay="1200">Why <strong class="font-weight-extra-bold text-color-thick">choose us</strong></h2>
+								</div>
+								<p class="appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="1400"  style="text-align: justify;">Subhujo Technologies is a leader in providing innovative software solutions services. We specialize in developing custom-made solutions for our clients that help them reach their desired goals quickly and efficiently. Our experienced professionals work around your timeline and budget constraints to deliver superior results that meet the unique needs of each industry or business model. With a renowned global reputation as one of the best IT companies to work with, we are able to attract the most qualified professionals who can ensure maximum ROI because of their experience and domain expertise.</p>
+								<!-- <p class="mb-0 appear-animation" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="1600"  style="text-align: justify;"> Subhujo's expansive service portfolio covers everything from general IT operations support through specialized industry-based projects - allowing us to provide comprehensive, cost-effective solutions across a wide range of industries. Subhujo stands at the vanguard of IT innovation, helping you drive tangible results quickly and efficiently.</p> -->
+							</div>
+							<div class="col-md-6 " data-appear-animation="fadeInLeftShorter" data-appear-animation-delay="1000">
+								<div class="owl-carousel owl-theme nav-inside mb-0" data-plugin-options="{'items': 1, 'margin': 10, 'animateOut': 'fadeOut', 'autoplay': true, 'autoplayTimeout': 6000, 'loop': true,'dots':false}">
+									<div>
+										<img alt="" class="img-fluid" src="{% static 'aboutpage/img/first.png'%}">
+									</div>
+									<div>
+										<img alt="" class="img-fluid " src="{% static 'aboutpage/img/first.png'%}">
+									</div>
+								</div>
+								
+							</div>
+						</div>
+
+					</div>
+				</section>
 
 				<div class="container">
 
@@ -191,9 +218,9 @@
 							<div class="col-md-3 col-lg-6">
 								<div class="call-to-action-btn">
 									<ul class="footer-social-icons social-icons mt-2">
-									<li class="social-icons-facebook"><a href="https://www.linkedin.com/company/subhujo-technologies-private-limited/ " target="_blank" title="Facebook"><i class="fab fa-facebook-f text-2 "></i></a></li>
-								<li class="social-icons-twitter"><a href=" https://twitter.com/SubhujoT" target="_blank" title="Twitter"><i class="fab fa-twitter "></i></a></li>
-								<li class="social-icons-linkedin"><a href="https://www.facebook.com/profile.php?id=100089807891732 " target="_blank" title="Linkedin"><i class="fab fa-linkedin-in text-2"></i></a></li>
+									<li class="social-icons-facebook"><a href="https://www.linkedin.com/company/subhujo-technologies-private-limited/ " target="_blank" title="Facebook"><i class="fab fa-facebook-f text-2 " style="line-height:2"></i></a></li>
+								<li class="social-icons-twitter top-6"><a href=" https://twitter.com/SubhujoT" target="_blank" title="Twitter"><i class="fab fa-twitter " style="line-height:2"></i></a></li>
+								<li class="social-icons-linkedin"><a href="https://www.facebook.com/profile.php?id=100089807891732 " target="_blank" title="Linkedin"><i class="fab fa-linkedin-in text-2" style="line-height:2"></i></a></li>
 							</ul>
 								</div>
 							</div>
@@ -458,38 +485,23 @@
 				<!-- projects end -->
 
 				<!-- scrollable parallax -->
-				<section class="parallax section section-text-light  section-parallax section-center  py-0 my-0" data-plugin-parallax data-plugin-options="{'speed': 1.5, 'scrollableParallax': true, 'scrollableParallaxMinWidth': 991, 'startOffset': 10, 'cssProperty': 'width', 'cssValueStart': 40, 'cssValueEnd': 100, 'cssValueUnit': 'vw'}" data-image-src="{% static 'img/aboutpage/subhujotechnologies-aboutpage-getquote-1920x1280.png'%}">
-					<div class="d-flex justify-content-center">
-						<div class="scrollable-parallax-wrapper">
-							<div class="container py-4 my-4">
-								<div class="row justify-content-center ">
-									<div class="col-lg-6 ">
-										<h4 class="mb-3">
-											Get in touch with us and let us help you, amazing projects can be build.</h4>
-										
-									</div>
-									<div class="col-lg-6 ">
-										<a href="" target="_blank" class="btn btn-modern btn-primary">Get Quote</a>
-										
-									</div>
-								</div>
+				
+				<!-- scrollable parallax-end -->
+				<section class="parallax section section-text-light section-parallax section-center overlay overlay-show overlay-op-8 my-0" data-plugin-parallax data-plugin-options="{'speed': 2.0}" data-image-src="{% static 'img/aboutpage/subhujotechnologies-aboutpage-getquote-1920x1280.png'%}">
+					<div class="container ">
+						<div class="row justify-content-center ">
+							<div class="col-lg-6 ">
+								<h4 class="mb-3">
+									Get in touch with us and let us help you, amazing projects can be build.</h4>
+								
+							</div>
+							<div class="col-lg-6 ">
+								<a href="" target="_blank" class="btn btn-modern btn-primary">Get Quote</a>
+								
 							</div>
 						</div>
 					</div>
 				</section>
-				<!-- scrollable parallax-end -->
-				<!-- <section class="parallax section section-text-light section-parallax section-center overlay overlay-show overlay-op-8 my-0" data-plugin-parallax data-plugin-options="{'speed': 2.0}"data-image-src="aboutpage/img/subhujotechnologies-aboutpage-getquote-1920x1280.jpg">
-					<div class="container py-5 my-3">
-						<div class="row justify-content-center text-center">
-							<div class="col">
-								<h4 class="text-11 font-weight-extra-bold mb-1 line-height-2">The Easiest Way</h4>
-								<p class="text-4 opacity-7 mb-4">Porto is a huge success, learn more about us.</p>
-
-								<a class="btn btn-gradient btn-xl font-weight-bold text-color-light py-3 text-2">GET STARTED NOW</a>
-							</div>
-						</div>
-					</div>
-				</section> -->
 
 				<section class="section section-default border-0 ">
 					<div class="container py-4">
@@ -497,7 +509,7 @@
 						<div class="row">
 							<div class="col pb-4 text-center">
 								<h2 class="text-color-dark font-weight-normal text-7 mb-0 pt-2">Meet <strong class="font-weight-extra-bold text-color-thick">Our Team</strong></h2>
-								<p>Rockstars lorem ipsum dolor sit amet, consectetur adipiscing elit ac laoreet libero.</p>
+								<p>experience the synergy of skill, passion, and excellence in delivering innovative solutions and delivering exceptional results for our clients.</p>
 							</div>
 						</div>
 						<!-- <div class="row">
