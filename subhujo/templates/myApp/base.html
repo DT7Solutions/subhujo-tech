@@ -79,58 +79,58 @@
 										<div class="header-nav-main header-nav-main-effect-1 header-nav-main-sub-effect-1">
 											<nav class="collapse">
 												<ul class="nav nav-pills" id="mainNav">
-													<li class="dropdown">
-														<a class="dropdown-item active"  href="/">
+													<li class="dropdown  "  >
+														<a class="dropdown-item {% if navbar == 'home' %} active {% endif %}"  href="/">
 															Home
 														</a>
 	
 													</li>
 													<li class="dropdown dropdown-mega">
-														<a class="dropdown-item " href="/about/" >
+														<a class="dropdown-item {% if navbar == 'about' %} active {% endif %}" href="/about/" >
 															About us
 														</a>
 	
 													</li>
 	
 													<li class="dropdown">
-														<a class="dropdown-item dropdown-toggle" href="#">
+														<a class="dropdown-item dropdown-toggle {% if navbar == 'Application-development'   %} active {% elif  navbar == 'offshore_development'  %} active {% elif  navbar == 'Corporate-training'  %} active {% elif  navbar == 'Sap'  %} active {% elif  navbar == 'testing'  %} active {% elif  navbar == 'Oracle'  %} active {% elif  navbar == 'it_ites_staffing'  %} active {% elif  navbar == 'dataware_housing'  %} active {% elif  navbar == 'Microsoftimplementation'  %}  active {% endif %}" href="#">
 															Services
 														</a>
 														<ul class="dropdown-menu">
 															<li >
-																<a class="dropdown-item" href="/application_development/">Application Development</a>
+																<a class="dropdown-item {% if navbar == 'Application-development' %} active {% endif %}" href="/application_development/">Application Development</a>
 	
 															</li>
 															<li >
-																<a class="dropdown-item" href="/offshore_development/">Offshore Development</a>
+																<a class="dropdown-item {% if navbar == 'offshore_development' %} active {% endif %}" href="/offshore_development/">Offshore Development</a>
 	
 															</li>
 															<li >
-																<a class="dropdown-item" href="/corporate_training/">Corporate Training</a>
+																<a class="dropdown-item {% if navbar == 'Corporate-training' %} active {% endif %}" href="/corporate_training/">Corporate Training</a>
 	
 															</li>
 															<li >
-																<a class="dropdown-item" href="/sap/">SAP</a>
+																<a class="dropdown-item {% if navbar == 'Sap' %} active {% endif %}" href="/sap/">SAP</a>
 	
 															</li>
 															<li >
-																<a class="dropdown-item" href="/testing/">Testing</a>
+																<a class="dropdown-item {% if navbar == 'testing' %} active {% endif %} " href="/testing/">Testing</a>
 	
 															</li>
 															<li >
-																<a class="dropdown-item" href="/it_ites_staffing/">IT /ITES Staffing</a>
+																<a class="dropdown-item {% if navbar == 'it_ites_staffing' %} active {% endif %}" href="/it_ites_staffing/">IT /ITES Staffing</a>
 	
 															</li>
 															<li >
-																<a class="dropdown-item" href="/dataware_housing/">Datawarehousing</a>
+																<a class="dropdown-item {% if navbar == 'dataware_housing' %} active {% endif %}" href="/dataware_housing/">Datawarehousing</a>
 	
 															</li>
 															<li>
-																<a class="dropdown-item" href="/oracle/">Oracle</a>
+																<a class="dropdown-item {% if navbar == 'Oracle' %} active {% endif %}" href="/oracle/">Oracle</a>
 	
 															</li>
 															<li >
-																<a class="dropdown-item" href="/microsoft_implementation/">Microsoft Implementation &
+																<a class="dropdown-item {% if navbar == 'Microsoftimplementation' %} active {% endif %}" href="/microsoft_implementation/">Microsoft Implementation &
 																	Support</a>
 	
 															</li>
@@ -138,13 +138,13 @@
 														</ul>
 													</li>
 													<li class="dropdown">
-														<a class="dropdown-item " href="/carrers/">
+														<a class="dropdown-item {% if navbar == 'carrers' %} active {% endif %}" href="/carrers/">
 															Carrers
 														</a>
 	
 													</li>
 													<li class="dropdown">
-														<a class="dropdown-item " href="/contact/">
+														<a class="dropdown-item {% if navbar == 'contact' %} active {% endif %}" href="/contact/">
 															Contact
 														</a>
 	
