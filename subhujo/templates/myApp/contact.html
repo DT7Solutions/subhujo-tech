@@ -21,43 +21,44 @@
 						<div class="col-lg-7">
 
 							<h2 class="font-weight-bold text-8 mt-2 mb-0">Contact Us</h2>
-							<p class="mb-4">Feel free to ask for details, don't save any questions!</p>
+							<p class="mb-4 contact-form-alert"></p>
 
-							<form class="contact-form" action="php/contact-form.php" method="POST">
-								<div class="contact-form-success alert alert-success d-none mt-4">
-									<strong>Success!</strong> Your message has been sent to us.
-								</div>
+							<form  id="contact-form" action="" method="POST">
+								{% csrf_token %}
+								<!-- <div class=" alert alert-success d-none mt-4">
+									<p class="contact-form-alert"> messagge...........</p>
+								</div> -->
 
-								<div class="contact-form-error alert alert-danger d-none mt-4">
+								<!-- <div class="contact-form-error alert alert-danger d-none mt-4">
 									<strong>Error!</strong> There was an error sending your message.
 									<span class="mail-error-message text-1 d-block"></span>
-								</div>
+								</div> -->
 
 								<div class="row">
 									<div class="form-group col-lg-6">
 										<label class="form-label mb-1 text-2">Full Name</label>
-										<input type="text" value="" data-msg-required="Please enter your name." maxlength="100" class="form-control text-3 h-auto py-2" name="name" required>
+										<input type="text" value="" data-msg-required="Please enter your name." maxlength="100" class="form-control text-3 h-auto py-2" name="name" id="name" required>
 									</div>
 									<div class="form-group col-lg-6">
 										<label class="form-label mb-1 text-2">Phone</label>
-										<input type="phone" value="" data-msg-required="Please enter your phone." data-msg-phone="Please enter a valid phone number." maxlength="100" class="form-control text-3 h-auto py-2" name="phone" required>
+										<input type="phone" value="" data-msg-required="Please enter your phone." data-msg-phone="Please enter a valid phone number." maxlength="100" class="form-control text-3 h-auto py-2" name="phone" id="phone" required>
 									</div>
 									
 								</div>
 								<div class="row">
 									<div class="form-group col-lg-6">
 										<label class="form-label mb-1 text-2">Email Address</label>
-										<input type="email" value="" data-msg-required="Please enter your email address." data-msg-email="Please enter a valid email address." maxlength="100" class="form-control text-3 h-auto py-2" name="email" required>
+										<input type="email" value="" data-msg-required="Please enter your email address." data-msg-email="Please enter a valid email address." maxlength="100" class="form-control text-3 h-auto py-2" name="email" id="email" required>
 									</div>
 									<div class="form-group col">
 										<label class="form-label mb-1 text-2">Subject</label>
-										<input type="text" value="" data-msg-required="Please enter the subject." maxlength="100" class="form-control text-3 h-auto py-2" name="subject" required>
+										<input type="text" value="" data-msg-required="Please enter the subject." maxlength="100" class="form-control text-3 h-auto py-2" name="subject" id="subject" required>
 									</div>
 								</div>
 								<div class="row">
 									<div class="form-group col">
 										<label class="form-label mb-1 text-2">Message</label>
-										<textarea maxlength="5000" data-msg-required="Please enter your message." rows="8" class="form-control text-3 h-auto py-2" name="message" required></textarea>
+										<textarea maxlength="5000" data-msg-required="Please enter your message." rows="8" class="form-control text-3 h-auto py-2" name="message" id="message" required></textarea>
 									</div>
 								</div>
 								<div class="row">
@@ -67,7 +68,7 @@
 								</div>
 								<div class="row">
 									<div class="form-group col">
-										<input type="submit" value="Send Message" class="btn btn-primary btn-modern" data-loading-text="Loading...">
+										<button type="submit" value="Send Message" class="btn btn-primary btn-modern" data-loading-text="Loading..."> Send </button>
 									</div>
 								</div>
 							</form>
@@ -121,6 +122,7 @@
                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3807.2512714864283!2d78.488322614789!3d17.399724988071146!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb99c38dd00001%3A0xedfbb7ccd99419d9!2sSubhujo%20Simplifies!5e0!3m2!1sen!2sin!4v1673344630383!5m2!1sen!2sin" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
 
+		
 
 			
 

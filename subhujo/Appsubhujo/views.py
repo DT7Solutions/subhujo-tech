@@ -8,7 +8,9 @@
 
 
 from django.shortcuts import render
-
+from.models import ContactData
+from django.contrib import messages
+from django.core.mail import send_mail
 # Create your views here.
 def home(request):
     return render (request,"myApp/index.html",{'navbar':'home'})
@@ -16,8 +18,25 @@ def about(request):
     return render (request,"myApp/about.html",{'navbar':'about'})
 def carrers(request):
     return render (request,"myApp/carrers.html",{'navbar':'carrers'})
+
 def contact(request):
+    if request.method == "POST":
+        name = request.POST.get('name',"")
+        email = request.POST.get('email',"")
+        phone = request.POST.get('phone',"")
+        subject = request.POST.get('subject',"")
+        message = request.POST.get('message',"")
+        oContactinfo = ContactData(Name=name,Email=email,Phone=phone,Subject=subject,Message=message)
+        oContactinfo.save()
+        sucess =f'hi {name} Your message has been received, We will contact you soon'
+        try:
+            send_mail(subject, message,'noreplaysubhujotechnologies@gmail.com',recipient_list=['subhujotechnologies@gmail.com']) 
+            messages.success(request,sucess)
+        except:
+            messages.error(request,'Your message has been failed, Please Try Agian')
+
     return render (request,"myApp/contact.html",{'navbar':'contact'})
+
 def application_development(request):
     return render (request,"myApp/Application-development.html" ,{'navbar':'Application-development'})
 def corporate_training(request):
