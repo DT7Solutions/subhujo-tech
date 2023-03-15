@@ -9,16 +9,18 @@
 
 from django.http import HttpResponse
 from django.shortcuts import render
-from.models import ContactData
+from.models import ContactData,AddJob
 from django.contrib import messages
 from django.core.mail import send_mail
+
 # Create your views here.
 def home(request):
     return render (request,"myApp/index.html",{'navbar':'home'})
 def about(request):
     return render (request,"myApp/about.html",{'navbar':'about'})
 def carrers(request):
-    return render (request,"myApp/carrers.html",{'navbar':'carrers'})
+    job_data = AddJob.objects.all()
+    return render (request,"myApp/carrers.html",{'navbar':'carrers','job_list':job_data})
 
 def contact(request):
     if request.method == "POST":
@@ -43,7 +45,7 @@ def contact(request):
         }]
         # post_job_to_linkedin(job_data=jobdata)
         #post_job(request)
-        linkedJobPosting(request)
+        # linkedJobPosting(request)
     return render (request,"myApp/contact.html",{'navbar':'contact'})
 
 def application_development(request):
@@ -76,7 +78,13 @@ from oauthlib.oauth2 import BackendApplicationClient
 
 
 
-def linkedJobPosting(request):
+def linkedJobPosting(job_data):
+    print("this is views section!")
+    title = job_data.get('Title')
+    print(title)
+    # for item in job_data:
+    #     print(item)
+
     # Define the PNet API endpoint
     #PNET_API_ENDPOINT = "https://api.pnet.co.za/v1/externalfeedservice.svc/JobAdverts?apikey=<YOUR_API_KEY>&categoryId=0&countryId=0&top=100"
 
@@ -93,6 +101,9 @@ def linkedJobPosting(request):
         # Loop through the job postings and post them to LinkedIn
         # for job_posting in job_postings:
         # Create the LinkedIn post payload
+    dec1 = job_data.get('ShortDescription')
+    dec2 = job_data.get('LongDescription')
+    exp = job_data.get('Experince')
     payload = {
                 
                 "author": "urn:li:person:GkIVWDje6C",
@@ -100,9 +111,26 @@ def linkedJobPosting(request):
                 "specificContent": {
                     "com.linkedin.ugc.ShareContent": {
                         "shareCommentary": {
-                            "text": "how to integrate pnet in django frame work"
+                            "text": title,
+                
                         },
-                        "shareMediaCategory": "NONE"
+                        # "shareMediaCategory": "NONE"
+                        "shareMediaCategory": "ARTICLE",
+                        "media": [
+                                        {
+                                            "status": "READY",
+                                            "description": {
+                                                "text": dec2
+                                            },
+                                            "originalUrl": "https://dt7solutions.com",
+                                            "title": {
+                                                "text": dec1
+                                            },
+                                            "title": {
+                                                "text": exp
+                                            }
+                                        }
+                                ]
                     }
                 },
                 "visibility": {
