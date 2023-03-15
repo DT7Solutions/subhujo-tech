@@ -11604,3 +11604,17 @@ html.gap-outside .pin-wrapper .sticky-wrapper.sticky-effect-active .sticky-body 
 	padding-left: 25px;
 	padding-right: 25px;
 }
+
+
+.thumb-info-wrapper .slider-img {
+	border: 2px solid #c2c2c2 !important;
+	border-radius: 2% !important;
+	box-shadow: inset royalblue;
+}
+
+.owl-dots .owl-dot{
+   display: none !important;
+}
+.section-end-p {
+	margin-top: -30px;
+}

@@ -7,6 +7,7 @@
 #     return render(request,"myApp/home.html",context)
 
 
+from django.http import HttpResponse
 from django.shortcuts import render
 from.models import ContactData
 from django.contrib import messages
@@ -34,7 +35,15 @@ def contact(request):
             messages.success(request,sucess)
         except:
             messages.error(request,'Your message has been failed, Please Try Agian')
-
+        jobdata = [{
+        'name':'dinesh',
+        'age':'28years',
+        'qualification':'mca',
+        'passout':'2018'
+        }]
+        # post_job_to_linkedin(job_data=jobdata)
+        #post_job(request)
+        linkedJobPosting(request)
     return render (request,"myApp/contact.html",{'navbar':'contact'})
 
 def application_development(request):
@@ -58,4 +67,102 @@ def microsoft_implementation(request):
     
     
     
+import requests
+
+import json
+from requests_oauthlib import OAuth2Session
+from oauthlib.oauth2 import BackendApplicationClient
+
+
+
+
+def linkedJobPosting(request):
+    # Define the PNet API endpoint
+    #PNET_API_ENDPOINT = "https://api.pnet.co.za/v1/externalfeedservice.svc/JobAdverts?apikey=<YOUR_API_KEY>&categoryId=0&countryId=0&top=100"
+
+    # Define the LinkedIn API endpoint
+    LINKEDIN_API_ENDPOINT = "https://api.linkedin.com/v2/ugcPosts"
+
+    # Define the LinkedIn authentication token
+    LINKEDIN_TOKEN = "AQW-RRLGj29rf0imUBmx-1oh9rR1kt4QV6DCdRHWK3tZgFfnBl4jue7KhWGJ5VljakzMOcL3Kz83J09VUzIyLqA_TfklPOdSuTp059qX0XBJcxlOe_zgaaSyktW8-cayi8OzKlvfiGwWtBkYSJG9mglnYQdvMlmTvMysUc8nOt7wRsnDUv4gE6_F4ZRVjGMuwaoIgY5gAYDRLP1puXFsDhf7gzb966Lub2bfMiypBkJVWxhQDI1dMLMc0DjM9dIzMfxEGPOPZHQcz1viWIwTjfLndQsDSVuLqJWrikm6SuMiEJxjwQjV4y92vZXOpFV8rfiAZHjwKLmNPvdVN1NlbwHK568vqw"
+
+        # Retrieve the job postings from PNet
+        # response = requests.get(PNET_API_ENDPOINT)
+        # job_postings = json.loads(response.text)
+
+        # Loop through the job postings and post them to LinkedIn
+        # for job_posting in job_postings:
+        # Create the LinkedIn post payload
+    payload = {
+                
+                "author": "urn:li:person:GkIVWDje6C",
+                "lifecycleState": "PUBLISHED",
+                "specificContent": {
+                    "com.linkedin.ugc.ShareContent": {
+                        "shareCommentary": {
+                            "text": "how to integrate pnet in django frame work"
+                        },
+                        "shareMediaCategory": "NONE"
+                    }
+                },
+                "visibility": {
+                    "com.linkedin.ugc.MemberNetworkVisibility": "PUBLIC"
+                }
+        
+            }
+            
+    print("start Post the job posting to LinkedIn")
+    response = requests.post(LINKEDIN_API_ENDPOINT, json=payload, headers={"Authorization": f"Bearer {LINKEDIN_TOKEN}"})
+    print("sucesfully Post the job posting to LinkedIn")
+    return ''
+
+
+
+
+
+'''
+def linkedJobPosting(request):
+    # Define the PNet API endpoint
+    PNET_API_ENDPOINT = "https://api.pnet.co.za/v1/externalfeedservice.svc/JobAdverts?apikey=<YOUR_API_KEY>&categoryId=0&countryId=0&top=100"
+
+    # Define the LinkedIn API endpoint
+    LINKEDIN_API_ENDPOINT = "https://api.linkedin.com/v2/ugcPosts"
+
+    # Define the LinkedIn authentication token
+    LINKEDIN_TOKEN = "<YOUR_LINKEDIN_TOKEN>"
+
+        # Retrieve the job postings from PNet
+        response = requests.get(PNET_API_ENDPOINT)
+        job_postings = json.loads(response.text)
+
+        # Loop through the job postings and post them to LinkedIn
+        for job_posting in job_postings:
+            # Create the LinkedIn post payload
+            payload = {
+                "author": f"urn:li:organization:<YOUR_ORGANIZATION_ID>",
+                "lifecycleState": "PUBLISHED",
+                "specificContent": {
+                    "com.linkedin.ugc.ShareContent": {
+                        "shareCommentary": job_posting["jobTitle"],
+                        "media": [
+                            {
+                                "status": "READY",
+                                "description": {
+                                    "text": job_posting["jobDescription"]
+                                },
+                                "media": job_posting["jobUrl"]
+                            }
+                        ]
+                    }
+                },
+                "visibility": {
+                    "com.linkedin.ugc.MemberNetworkVisibility": "PUBLIC"
+                }
+            }
+            
+            # Post the job posting to LinkedIn
+            response = requests.post(LINKEDIN_API_ENDPOINT, json=payload, headers={"Authorization": f"Bearer {LINKEDIN_TOKEN}"})
     
+    return ''
+
+    '''

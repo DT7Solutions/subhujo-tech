@@ -12,7 +12,7 @@ from .views import home,about,carrers,contact,application_development,corporate_
 urlpatterns = [
     path('', home, name='home'),
     path('about/', about, name='about'),
-    path('carrers/', carrers, name='carrers'),
+    path('careers/', carrers, name='carrers'),
     path('contact/', contact, name='contact'),
     path('application_development/',application_development, name='application_development'),
     path('corporate_training/',corporate_training, name='corporate_training'),
