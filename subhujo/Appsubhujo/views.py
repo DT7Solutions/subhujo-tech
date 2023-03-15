@@ -63,7 +63,7 @@ def sap(request):
 def testing(request):
     return render (request,"myApp/testing.html",{'navbar':'testing'})
 def microsoft_implementation(request):
-    return render (request,"myApp/Microsoftimplementation.html",{'navbar':'Microsoftimplementation'})
+    return render (request,"myApp/microsoft_implementation.html",{'navbar':'microsoft_implementation'})
     
     
     

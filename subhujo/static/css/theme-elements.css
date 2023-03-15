@@ -1198,7 +1198,7 @@ Theme Version:	9.9.0
 }
 
 [data-plugin-animated-words] {
-	opacity: 0;
+	opacity: 1;
 }
 
 [data-plugin-animated-words].initialized {
