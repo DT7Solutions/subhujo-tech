@@ -194,3 +194,27 @@ def linkedJobPosting(request):
     return ''
 
     '''
+
+
+# (or)
+
+''' 
+url = "https://api.pnet.co.za/v1/externalfeedservice.svc/JobAdverts"
+api_key = "YOUR_API_KEY"
+
+params = {
+    "apikey": api_key,
+    "categoryId": 0,
+    "countryId": 0,
+    "top": 100
+}
+
+response = requests.get(url, params=params)
+
+if response.status_code == 200:
+    job_adverts = response.json()
+    # Do something with the job adverts
+else:
+    print("Failed to retrieve job adverts from Pnet API.")
+
+    '''
