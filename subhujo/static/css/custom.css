@@ -60,3 +60,13 @@ section.section {
 .text-equal{
     text-align: justify!important;
 }
+
+html .btn-second{
+background-color:  #f26d07!important;
+    border-color:  #f26d07 ;
+    color: #FFF;
+    --color: #f26d07 !important;
+    --hover: #f26d07 !important;
+    --disabled:  #f26d07!important;
+    --active:  #f26d07;
+}
