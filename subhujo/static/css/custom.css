@@ -70,3 +70,7 @@ background-color:  #f26d07!important;
     --disabled:  #f26d07!important;
     --active:  #f26d07;
 }
+
+.scroll-to-top{
+display:nne !important;
+}
