@@ -71,6 +71,6 @@ background-color:  #f26d07!important;
     --active:  #f26d07;
 }
 
-.scroll-to-top{
-display:nne !important;
+.scroll-to-top {
+    display: none !important;
 }
