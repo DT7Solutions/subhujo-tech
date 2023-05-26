@@ -69,11 +69,11 @@ def microsoft_implementation(request):
     
     
     
-import requests
+# import requests
 
-import json
-from requests_oauthlib import OAuth2Session
-from oauthlib.oauth2 import BackendApplicationClient
+# import json
+# from requests_oauthlib import OAuth2Session
+# from oauthlib.oauth2 import BackendApplicationClient
 
 
 

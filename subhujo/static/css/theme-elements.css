@@ -13554,7 +13554,7 @@ html .scroll-to-top:hover {
 }
 
 html .scroll-to-top.visible {
-	opacity: 0.75;
+	opacity: 0.1;
 }
 
 html .scroll-to-top span {
