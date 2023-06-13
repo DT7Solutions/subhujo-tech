@@ -66,14 +66,18 @@ def testing(request):
     return render (request,"myApp/testing.html",{'navbar':'testing'})
 def microsoft_implementation(request):
     return render (request,"myApp/microsoft_implementation.html",{'navbar':'microsoft_implementation'})
+def termsconditions(request):
+    return render (request,"myApp/terms-conditions.html")
+def privacypolicy(request):
+    return render (request,"myApp/privacypolicy.html")
     
     
     
-# import requests
+import requests
 
-# import json
-# from requests_oauthlib import OAuth2Session
-# from oauthlib.oauth2 import BackendApplicationClient
+import json
+from requests_oauthlib import OAuth2Session
+from oauthlib.oauth2 import BackendApplicationClient
 
 
 
@@ -108,7 +112,7 @@ def linkedJobPosting(job_data):
                 
                 "author": "urn:li:person:GkIVWDje6C",
                 "lifecycleState": "PUBLISHED",
-                "specificContent": {
+                "specificContent": {    
                     "com.linkedin.ugc.ShareContent": {
                         "shareCommentary": {
                             "text": title,

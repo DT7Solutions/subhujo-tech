@@ -8,7 +8,7 @@
 # ]
 
 from django.urls import path
-from .views import home,about,carrers,contact,application_development,corporate_training,sap,dataware_housing,oracle,microsoft_implementation,testing,offshore_development,it_ites_staffing
+from .views import home,about,carrers,contact,application_development,termsconditions,privacypolicy,corporate_training,sap,dataware_housing,oracle,microsoft_implementation,testing,offshore_development,it_ites_staffing
 urlpatterns = [
     path('', home, name='home'),
     path('about/', about, name='about'),
@@ -22,6 +22,8 @@ urlpatterns = [
     path('oracle/',oracle, name='oracle'),
     path('sap/',sap, name='sap'),
     path('testing/',testing, name='testing'),
+    path('terms-conditions/',termsconditions, name='terms-conditions'),
+    path('privacypolicy/',privacypolicy, name='privacypolicy'),
     path('offshore_development/',offshore_development, name='offshore_development'),
 
 ]
