@@ -25,6 +25,6 @@ urlpatterns = [
     path('terms-conditions/',termsconditions, name='terms-conditions'),
     path('privacypolicy/',privacypolicy, name='privacypolicy'),
     path('offshore_development/',offshore_development, name='offshore_development'),
-    path('error/',page_not_found_view, name='error'),
+    path('not_found/',page_not_found_view, name='not_found'),
 
 ]
