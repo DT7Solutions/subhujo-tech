@@ -13532,10 +13532,10 @@ html.boxed .nav-secondary.sticky-active {
 /* Scroll to Top */
 html .scroll-to-top {
 	transition: opacity 0.3s;
-	background: #404040;
+	background: #eb8a3e;
 	border-radius: 4px 4px 0 0;
 	bottom: 0;
-	color: #0088CC;
+	color: white;
 	display: block;
 	height: 9px;
 	opacity: 0;
@@ -13554,7 +13554,7 @@ html .scroll-to-top:hover {
 }
 
 html .scroll-to-top.visible {
-	opacity: 0.1;
+	opacity: 0.7;
 }
 
 html .scroll-to-top span {

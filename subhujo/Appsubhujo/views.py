@@ -70,6 +70,8 @@ def termsconditions(request):
     return render (request,"myApp/terms-conditions.html")
 def privacypolicy(request):
     return render (request,"myApp/privacypolicy.html")
+def page_not_found_view(request ,exception):
+    return render (request,"myApp/404.html",status=404)
     
     
     
