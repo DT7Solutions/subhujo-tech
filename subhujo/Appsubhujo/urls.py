@@ -11,7 +11,7 @@ from django.urls import path
 from .views import home,about,carrers,contact,application_development,termsconditions,privacypolicy,corporate_training,sap,dataware_housing,oracle,microsoft_implementation,testing,offshore_development,page_not_found_view,it_ites_staffing
 urlpatterns = [
     path('', home, name='home'),
-    path('about/', about, name='about'),
+    path('about_us/', about, name='about_us'),
     path('careers/', carrers, name='carrers'),
     path('contact/', contact, name='contact'),
     path('application_development/',application_development, name='application_development'),
