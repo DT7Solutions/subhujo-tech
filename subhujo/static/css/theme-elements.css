@@ -3172,7 +3172,7 @@ html.sticky-header-active .hamburguer-btn.hamburguer-btn-sticky-dark .close span
 	position: relative;
 	border: none;
 	perspective: 1000px;
-	/* min-height: 500px!important; */
+	min-height: 450px!important;
 }
 
 .flip-card .flip-front,
@@ -3185,7 +3185,7 @@ html.sticky-header-active .hamburguer-btn.hamburguer-btn-sticky-dark .close span
 	box-shadow: 0px 0px 44px -10px rgba(0, 0, 0, 0.15);
 	transform-style: preserve-3d;
 	transition: ease transform 500ms;
-	/* min-height:450px!important; */
+	min-height: 450px!important;
 }
 
 .flip-card .flip-front .flip-content,

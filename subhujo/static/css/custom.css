@@ -35,7 +35,7 @@ section.section {
     overflow: hidden;
     text-align: justify;
     display: -webkit-box;
-    -webkit-line-clamp: 6;
+    -webkit-line-clamp: 7!important;
     -webkit-box-orient: vertical;
 }
 
