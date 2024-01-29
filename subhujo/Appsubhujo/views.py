@@ -72,9 +72,21 @@ def privacypolicy(request):
     return render (request,"myApp/privacypolicy.html")
 def page_not_found_view(request ,exception):
     return render (request,"myApp/404.html",status=404)
+def vmware_tanzu(request):
+    return render(request, "myApp/vmware-tanzu.html",{'navbar':'vmware_tanzu'})
+def apigee(request):
+    return render(request, "myApp/apigee.html", {'navbar':'apigee'})
     
-    
-    
+def openshift(request):
+    return render(request, "myApp/openshift.html", {'navbar':'openshift'})
+
+def apigee_consulting(request):
+    return render(request, "myApp/apigee_consulting.html", {'navbar':'apigee_consulting'})
+
+def temenos_consulting(request):
+    return render(request, 'myApp/temenos_consulting.html', {'navbar':'temenos_consulting'})
+
+
 import requests
 
 import json

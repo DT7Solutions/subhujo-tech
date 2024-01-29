@@ -15334,8 +15334,14 @@ html.gecko .sort-destination.sort-destination-margin > [class*="col-"] {
 }
 
 /* Tables */
-.table td, .table th {
-	border-color: rgba(0, 0, 0, 0.06);
+.table td{
+	/* border-color: rgba(0, 0, 0, 0.06); */
+	color: #777;
+	border:2px solid #030708;
+}
+
+.table th{
+	border: 2px solid #030708;
 }
 
 .table > :not(:first-child) {
@@ -16343,7 +16349,7 @@ html.gecko .sort-destination.sort-destination-margin > [class*="col-"] {
 /* With Quotes */
 .testimonial.testimonial-with-quotes blockquote:before {
 	color: #777;
-	display: block !important;
+	/* display: block !important; */
 	left: 10px;
 	top: 0;
 	content: "“";
