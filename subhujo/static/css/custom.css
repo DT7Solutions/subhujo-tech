@@ -33,7 +33,7 @@ section.section {
 }
 .flip-content p {
     overflow: hidden;
-    text-align: justify;
+    text-align: start;
     display: -webkit-box;
     -webkit-line-clamp: 7!important;
     -webkit-box-orient: vertical;
